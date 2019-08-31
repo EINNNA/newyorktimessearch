@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="java.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Title -->
+        <div class="row">
+            <div class="col-md-12">
+                <h1>New York Times Search</h1>
+            </div>
+        </div>
+        <br>
+        <!-- Search Field -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        Search Parameters
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="search">Search Term:</label>
+                            <input type="text" class="form-control" id="search" placeholder="Enter Search Term">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="retreivingRecords">Number of Records to Retreive::</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>1</option>
+                                <option>5</option>
+                                <option>10</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="startYear">Start Year(Optional):</label>
+                            <input type="text" class="form-control" id="startYear" placeholder="Enter Start Year">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="endYear">End Year(Optional):</label>
+                            <input type="text" class="form-control" id="endYear" placeholder="Enter End Year">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary submit">Search</button>
+                        <button type="submit" class="btn btn-primary clear">Clear Results</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        </container>
+</body>
+
+</html>
