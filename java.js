@@ -1,3 +1,8 @@
+$(document).ready(function() {
+
+    $(".search").on("click", function(e){
+        e.preventDefault();
+
 var searchWord = $("#search").val();
 var recordNumber = $("#exampleFormControlSelect1").val();
 var startYear = $("#startYear").val();
@@ -18,6 +23,8 @@ function buildURL(){
     + recordNumber;
 }
 
+buildURL();
+
 if((startYear != "") && (endYear != "")){
     queryURL = queryURL + "begin_date=" + startYear + "0101&end_date=" + endYear + "1231";
 
@@ -32,21 +39,21 @@ if((startYear != "") && (endYear != "")){
 
 $.ajax({
 	url: queryURL,
-	method: "method"
+	method: "GET"
 }).then(function(response){
     
-    var result = response.docs;
-
+    var result = response.response.docs;
+    console.log(response);
     var title = result[0].headline.main;
     var source = result[0].source;
     var url = result[0].web_url;
 
     var articleDiv = $("<div>");
 
-    $(articleDiv).append("<a href=" + url + "target='_blank'>" + title + "</a>");
+    $(articleDiv).append("<a href='" + url + "' target='_blank'>" + title + "</a>");
     $(articleDiv).append("<p>" + source + "</p>");
 
-    $("article").append(articleDiv);
+    $("#articleResults").append(articleDiv);
 
 
 
@@ -54,6 +61,8 @@ $.ajax({
 
 
 
-$(document).ready(function() {
+
+
+    })
 
 });
