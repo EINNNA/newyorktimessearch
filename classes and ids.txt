@@ -1,0 +1,6 @@
+Line 42: #startYear = start year input
+Line 48: 
+
+Line 51: .search = search button 
+Line 52: .clear = clear results button
+
